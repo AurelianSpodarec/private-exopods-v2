@@ -11,16 +11,13 @@ function Navigation() {
 
     return (
         <nav className={`
-                flex flex-col 
                 fixed left-6 top-7 bottom-7
-                rounded-3xl
-                h-screen
-                w-[80px]
-                z-30 bg-black 
+                h-window w-[80px]
+                rounded-3xl z-30 bg-black 
                 border-r border-r-gray-600
             `}
         >
-        <div className="h-full w-full text-white py-8">
+        <div className="h-full w-full text-white py-8 relative flex flex-col">
 
             <div className="flex items-center w-full justify-center mb-10">
                 <Link to="/" className="block"> 
