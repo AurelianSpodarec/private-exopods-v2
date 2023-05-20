@@ -17,8 +17,20 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    
   },
   "include": ["src"],
+  "paths": {
+    "assets/*": ["./src/assets/*"],
+    "config/*": ["./src/config/*"],
+    "styles/*": ["./src/styles/*"],
+
+    "layout/*": ["./src/views/_layout/*"],
+    "atoms/*": ["./src/views/atoms/*"],
+    "molecules/*": ["./src/views/molecules/*"],
+    "pages/*": ["./src/views/pages/*"]
+  },
   "references": [{ "path": "./tsconfig.node.json" }]
 }
