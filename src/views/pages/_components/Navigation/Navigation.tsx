@@ -15,6 +15,7 @@ function Navigation() {
                 h-window w-[80px]
                 rounded-3xl z-30 bg-black 
                 border-r border-r-gray-600
+                drop-shadow-[0_4px_4px_rgba(0,0,0,1)]
             `}
         >
         <div className="h-full w-full text-white py-8 relative flex flex-col">
