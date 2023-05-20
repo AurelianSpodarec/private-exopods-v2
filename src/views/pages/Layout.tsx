@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 
 import CustomRoutes from "config/CustomRoutes";
+import Navigation from "./_components/Navigation/Navigation";
 
 
 function Layout() {
@@ -11,9 +12,9 @@ function Layout() {
 
             <div id="context-wrap" className={`flex flex-col h-full`}> 
 
-                {/* Nav */}
+                <Navigation />
 
-                <div className={`flex pl-[50px] flex-col h-full relative`}>
+                <div className={`flex pl-[104px] flex-col h-full relative`}>
 
                     {/* Header */}
                     <main className="h-full w-full">

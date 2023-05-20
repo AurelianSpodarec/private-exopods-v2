@@ -1,0 +1,45 @@
+import { Link } from "react-router-dom";
+
+import { configApp } from "config/configApp";
+import { configMenu } from "config/configMenu";
+
+import NavList from "./_components/NavList";
+
+import logo from "./../../../../../src/assets/images/logo.png";
+
+function Navigation() {
+
+    return (
+        <nav className={`
+                flex flex-col 
+                fixed left-6 top-7 bottom-7
+                rounded-3xl
+                h-screen
+                w-[80px]
+                z-30 bg-black 
+                border-r border-r-gray-600
+            `}
+        >
+        <div className="h-full w-full text-white py-8">
+
+            <div className="flex items-center w-full justify-center mb-10">
+                <Link to="/" className="block"> 
+                    <div className="flex items-center justify-center">
+                        
+                        <img className="w-9 mx-auto" src={logo} alt="" />
+
+                        <span className="sr-only">{configApp.name}</span>
+                    </div>
+                </Link>
+            </div>
+
+            <div className="flex flex-col flex-1 h-full overflow-auto sidebar-scrollbar">
+                <NavList data={configMenu.navigation} />
+            </div>
+
+        </div>
+    </nav>
+    )
+}
+
+export default Navigation;
