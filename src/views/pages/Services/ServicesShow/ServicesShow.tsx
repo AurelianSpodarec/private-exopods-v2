@@ -1,7 +1,20 @@
-import { Link, Outlet, useParams } from "react-router-dom";
+import { Link, NavLink, Outlet, useParams } from "react-router-dom";
 import { configPages } from "config/configPages";
 
 import Container from "layout/Container";
+
+function ServiceNavItem({ id, name, url }: any) {
+    return (
+        <NavLink
+            to={`${configPages.SERVICES.path}/${id}${url}`}
+            className={({ isActive }) => (
+                `text-xs px-1 pb-3 whitespace-nowrap border-b ${isActive ? "text-[#252C32] border-[#000] font-semibold active-class" : "font-medium border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"}`
+            )}
+        >
+            {name}
+        </NavLink>
+    );
+}
 
 function ServicesShow() {
     const { id } = useParams();
@@ -36,20 +49,21 @@ function ServicesShow() {
                 </div>
             </section>
 
-       
+    
 
             <section>
-                <div>
-                    <nav>
-                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.LOGS.path}`}>Logs</Link>
-                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.REVISION.path}`}>Revision</Link>
-                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.INSPECT.path}`}>Inspect</Link>
-                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.FILES.path}`}>Files</Link>
-                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.NETWORKING.path}`}>Networking</Link>
-                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.INTEGREGATION.path}`}>Integregation</Link>
-                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.TRIGGERS.path}`}>Triggers</Link>
+                <div className="border-b border-gray-200 pb-2.5 mb-4">
+                    <nav className="space-x-8">
+                        <ServiceNavItem id={id} url={configPages.LOGS.path} name="Logs" />
+                        <ServiceNavItem id={id} url={configPages.REVISION.path} name="Revision" />
+                        <ServiceNavItem id={id} url={configPages.INSPECT.path} name="Inspect" />
+                        <ServiceNavItem id={id} url={configPages.FILES.path} name="Files" />
+                        <ServiceNavItem id={id} url={configPages.NETWORKING.path} name="Networking" />
+                        <ServiceNavItem id={id} url={configPages.INTEGREGATION.path} name="Integregation" />
+                        <ServiceNavItem id={id} url={configPages.TRIGGERS.path} name="Triggers" />
                     </nav>
                 </div>
+
                 <div>
                     <Outlet />
                 </div>
