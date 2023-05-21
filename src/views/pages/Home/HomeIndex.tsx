@@ -5,7 +5,7 @@ function HomeIndex() {
     return (
         <Container>
             
-            <Card className="h-[120px] relative">
+            <Card className="h-[120px] relative mr-56 -mt-16">
                 <div className="flex jusify-between items-center w-full">
                 <div>
                     <h1 className="text-4xl font-bold">Hello Anthony!</h1>
