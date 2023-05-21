@@ -2,9 +2,36 @@ export const configPages = {
     DASHBOARD: {
         path: "/"
     },
+
+    // Services
+    // ====================================================
     SERVICES: {
         path: "/services"
     },
+    LOGS: {
+        path: "/logs"
+    },
+    REVISION: {
+        path: "/revision"
+    },
+    INSPECT: {
+        path: "/inspect"
+    },
+    FILES: {
+        path: "/files"
+    },
+    NETWORKING: {
+        path: "/networking"
+    },
+    INTEGREGATION: {
+        path: "/integregation"
+    },
+    TRIGGERS: {
+        path: "/triggers"
+    },
+
+    // Other
+    // ====================================================
     MONITOR: {
         path: "/monitor"
     },

@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
+import { configPages } from "config/configPages";
 
 import Container from "layout/Container";
-import PageHeader from "molecules/PageHeader";
 
 function ServicesShow() {
     const { id } = useParams();
@@ -40,14 +40,18 @@ function ServicesShow() {
 
             <section>
                 <div>
-                    Links
+                    <nav>
+                        <Link to={configPages.SERVICES.path + configPages.LOGS.path}>Logs</Link>
+                        <Link to={configPages.SERVICES.path + configPages.REVISION.path}>Revision</Link>
+                        <Link to={configPages.SERVICES.path + configPages.INSPECT.path}>Inspect</Link>
+                        <Link to={configPages.SERVICES.path + configPages.FILES.path}>Files</Link>
+                        <Link to={configPages.SERVICES.path + configPages.NETWORKING.path}>Networking</Link>
+                        <Link to={configPages.SERVICES.path + configPages.INTEGREGATION.path}>Integregation</Link>
+                        <Link to={configPages.SERVICES.path + configPages.TRIGGERS.path}>Triggers</Link>
+                    </nav>
                 </div>
                 <div>
-
-                    <div className="h-6 border-b border-b-[#E5E9EB]">
-                        <p className="text-xs font-normal text-[#252C32]">Error response from daemon: no container with name or ID "73d7dfd561ad5ae23cf43823096d06f108e8b815f351abf5be9e2ecf4aa862d6" found: no such container</p>
-                    </div>
-                    
+                    <Outlet />
                 </div>
             </section>
         </Container>
