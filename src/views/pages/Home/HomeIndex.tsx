@@ -1,5 +1,6 @@
 import Card from "atoms/Card";
 import Container from "layout/Container";
+import { Link } from "react-router-dom";
 
 function HomeIndex() {
     return (
@@ -8,7 +9,7 @@ function HomeIndex() {
             <Card className="h-[120px] relative mr-56 -mt-16">
                 <div className="flex jusify-between items-center w-full">
                 <div>
-                    <h1 className="text-4xl font-bold">Hello Anthony!</h1>
+                    <h1 className="text-4xl font-semibold">Hello Anthony!</h1>
                     <p className="text-base">It's good to see you.</p>
                 </div>
                 <div>
@@ -49,6 +50,21 @@ function HomeIndex() {
                 </div>
                 </div>
             </Card>
+
+
+            <section className="mt-20">
+                <div className="mb-12 max-w-[700px]">
+                    <div className="mb-8 font-semibold">
+                        <h1 className="text-3xl">Serverless</h1>
+                        <span className="text-4xl">Deploy your <span className="text-[#08A593]">First Container</span></span>
+                    </div>
+                    <p className="text-sm">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <button className="mb-20">
+                    Get Started 
+                </button>
+                <Link to="#" className="block text-[#1A73E8] text-sm capitalize underline">Checkout most popular docker image to deploy with a single click</Link>
+            </section>
 
         </Container>
     )
