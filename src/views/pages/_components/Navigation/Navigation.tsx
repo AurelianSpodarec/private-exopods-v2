@@ -11,7 +11,7 @@ function Navigation() {
 
     return (
         <nav className={`
-                fixed left-6 top-7 bottom-7
+                fixed left-6 top-8 bottom-8
                 h-window w-[80px]
                 rounded-3xl z-30 bg-black 
                 border-r border-r-gray-600
