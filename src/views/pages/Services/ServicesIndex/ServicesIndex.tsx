@@ -25,7 +25,7 @@ function ServiceItemTR({ status }:any) {
             </div>
             </td>
             <CellLink label="docker/welcome-to-docker:latest" />
-            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 hours ago</td>
+            <td className="whitespace-nowrap px-3 py-4 text-sm text-[#667085]">1 hours ago</td>
             <CellLink label="8088" />
             <CellStatus label={status} status={status} />
             <td className="whitespace-nowrap py-4 pl-3 pr-4">
@@ -58,15 +58,15 @@ function ServicesIndex() {
             <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
 
                 <div className="relative">
-                <table className="min-w-full table-fixed divide-y divide-gray-300">
+                <table className="min-w-full table-fixed">
 
-                    <thead className="bg-[#F5F5F7] h-12">
-                    <tr>
-                        <th scope="col" className="min-w-[5rem] pr-3 text-left text-sm font-semibold text-gray-900">Name</th>
-                        <th scope="col" className="px-3 text-left text-sm font-semibold text-gray-900">Image</th>
-                        <th scope="col" className="px-3 text-left text-sm font-semibold text-gray-900">Last Updated</th>
-                        <th scope="col" className="px-3 text-left text-sm font-semibold text-gray-900">Port(S)</th>
-                        <th scope="col" className="px-3 text-left text-sm font-semibold text-gray-900">Status</th>
+                    <thead className=" rounded-2xl h-12">
+                    <tr className="text-[#667085] text-xs font-normal">
+                        <th scope="col" className="min-w-[5rem] text-left pl-4 bg-[#F5F5F7] rounded-tl-2xl rounded-bl-2xl">Name</th>
+                        <th scope="col" className="text-left bg-[#F5F5F7]">Image</th>
+                        <th scope="col" className="text-left bg-[#F5F5F7]">Last Updated</th>
+                        <th scope="col" className="text-left bg-[#F5F5F7]">Port(S)</th>
+                        <th scope="col" className="text-left bg-[#F5F5F7] rounded-tr-2xl rounded-br-2xl">Status</th>
                         <th scope="col" className="relative  pl-3 pr-4 sm:pr-3">
                             <span className="sr-only">Manage</span>
                         </th>
