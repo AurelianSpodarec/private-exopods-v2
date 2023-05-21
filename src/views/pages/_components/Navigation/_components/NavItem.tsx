@@ -1,11 +1,12 @@
 import Tooltip from "molecules/Tooltip";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavItem({ item, isActive }:NavItemProps) {
+    console.log(isActive)
     return (
         <li className="cursor-default fill-gray-500 text-gray-500 hover:fill-gray-300 hover:text-gray-400 transition justify-center flex">
         <Tooltip name={item.name} position="right" dely={200}>
-        <Link 
+        <NavLink 
             to={`${item.url}`} 
             className="flex relative items-center cursor-default group p-2 w-full">
                 {isActive && <div className="absolute left-0 h-full bg-white w-[5px] rounded-tr-[20px] rounded-br-[20px]"></div>}
@@ -15,7 +16,7 @@ function NavItem({ item, isActive }:NavItemProps) {
                     </div>
                     <span className="sr-only">{item.name}</span> 
                 </div>
-        </Link>
+        </NavLink>
         </Tooltip>
         </li>
     )

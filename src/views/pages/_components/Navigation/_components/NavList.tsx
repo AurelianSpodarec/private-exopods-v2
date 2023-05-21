@@ -3,14 +3,16 @@ import NavItem from "./NavItem";
 
 function NavList({ data, className, bottom = false }:NavListProps) {
     const location = useLocation();
-    const pathnameWithoutDashboard = location.pathname.replace(/^\/dashboard(\/|$)/, '/');
+    const pathname = location.pathname;
 
     return (
         <nav className={`flex flex-1 flex-col ${className}`}>
         <ul role="list" className={`flex flex-1 flex-col space-y-6 ${bottom ? "justify-end" : ""}`}>
     
             {data && data.map(((item:any) => {
-                return <NavItem key={item.url} item={item} isActive={pathnameWithoutDashboard === item.url}/>
+                const firstPartOfUrl = item.url.split('/')[1];
+                const isActive = pathname.startsWith(`/${firstPartOfUrl}`);
+                return <NavItem key={item.url} item={item} isActive={isActive}/>
             }))}
     
         </ul>
