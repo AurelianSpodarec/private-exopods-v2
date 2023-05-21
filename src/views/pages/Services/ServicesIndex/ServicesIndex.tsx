@@ -39,6 +39,38 @@ function ServiceItemTR({ status }:any) {
     )
 }
 
+function FilterTypeItem({ id, label }:any) {
+    return (
+        <li>
+        <input type="radio" id={id} name="hosting" value={id} className="hidden peer" required />
+        <label 
+            htmlFor={id} 
+            className="
+                inline-flex items-center justify-between w-full h-10 cursor-pointer
+                bg-[#F5F5F7] text-black
+                peer-checked:bg-black peer-checked:text-[#FEFEFF]
+            ">                           
+            <div className="text-xs font-medium py-2 px-4 ">
+                {label}    
+            </div>  
+        </label>
+    </li>
+    )
+}
+
+function StatBox({ label, value, config }) {
+    // up
+    // down
+    return (
+        <div className="flex flex-col">
+            {label}
+            <div>
+                {value}
+            </div>
+        </div>
+    )
+}
+
 function ServicesIndex() {
     const [hasContainer] = useState(true)
 
@@ -49,17 +81,23 @@ function ServicesIndex() {
         <PageHeader title="Services" className="flex items-center justify-between">
 
             <div className="ml-auto">
-                Running 
-                Stopped
+                <div className="flex items-center space-x-28">
+                    <StatBox label="Running" value="18" config="up" />
+                    <StatBox label="Stop" value="4" config="down" />
+                </div>
             </div>
         </PageHeader>
 
         <section>
         <div className="flex items-center justify-between">
             <div>
-                View All
-                Running
-                Stopped
+                
+            <ul className="flex overflow-hidden rounded-xl">
+                <FilterTypeItem label="View all" id="view-all" />
+                <FilterTypeItem label="Running"  id="running"/>
+                <FilterTypeItem label="Stopped"  id="stopped"/>
+            </ul>
+
             </div>
 
             <div className="flex items-center">
