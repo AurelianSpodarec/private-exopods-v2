@@ -39,10 +39,10 @@ function ServiceItemTR({ status }:any) {
     )
 }
 
-function FilterTypeItem({ id, label }:any) {
+function FilterTypeItem({ id, checked, label }:any) {
     return (
         <li>
-        <input type="radio" id={id} name="hosting" value={id} className="hidden peer" required />
+        <input defaultChecked type="radio" id={id} name="hosting" value={id} className="hidden peer" required />
         <label 
             htmlFor={id} 
             className="
@@ -89,6 +89,8 @@ function ServicesIndex() {
     if(!hasContainer) return <GetStartedContainer />
     return (
         <Container>
+
+        <section className="pb-2">
         <PageHeader title="Services" className="flex items-center justify-between">
 
             <div className="ml-auto">
@@ -98,13 +100,15 @@ function ServicesIndex() {
                 </div>
             </div>
         </PageHeader>
+        </section>
+
 
         <section>
         <div className="flex items-center justify-between">
             <div>
                 
             <ul className="flex overflow-hidden rounded-xl">
-                <FilterTypeItem label="View all" id="view-all" />
+                <FilterTypeItem checked label="View all" id="view-all" />
                 <FilterTypeItem label="Running"  id="running"/>
                 <FilterTypeItem label="Stopped"  id="stopped"/>
             </ul>
@@ -117,6 +121,7 @@ function ServicesIndex() {
             </div>
         </div>
         </section>
+
 
         <section className="">
         <div className="mt-8 flow-root">
