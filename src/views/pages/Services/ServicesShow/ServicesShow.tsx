@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useParams } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import { configPages } from "config/configPages";
 
 import Container from "layout/Container";

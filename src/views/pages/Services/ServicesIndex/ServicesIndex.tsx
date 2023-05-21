@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import GetStartedContainer from "../_sections/GetStartedContainer";
 
@@ -40,15 +40,33 @@ function ServiceItemTR({ status }:any) {
 }
 
 function ServicesIndex() {
-    const [hasContainer, setHasContainer] = useState(true)
+    const [hasContainer] = useState(true)
+
 
     if(!hasContainer) return <GetStartedContainer />
     return (
         <Container>
-        <PageHeader title="Services" />
+        <PageHeader title="Services" className="flex items-center justify-between">
+
+            <div className="ml-auto">
+                Running 
+                Stopped
+            </div>
+        </PageHeader>
 
         <section>
+        <div className="flex items-center justify-between">
+            <div>
+                View All
+                Running
+                Stopped
+            </div>
 
+            <div className="flex items-center">
+                <input placeholder="Search container" />
+                <NavLink to="/services/new">New Container</NavLink>
+            </div>
+        </div>
         </section>
 
         <section className="">

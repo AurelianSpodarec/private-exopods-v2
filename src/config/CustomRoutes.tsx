@@ -1,8 +1,6 @@
 import { Navigate, useRoutes } from "react-router-dom";
 import { configPages } from "config/configPages";
 
-import HomeIndex from "pages/Home/HomeIndex";
-
 import Forbidden from "pages/Forbidden/Forbidden";
 import NotFound from "pages/NotFound/NotFound";
 import ServicesIndex from "pages/Services/ServicesIndex/ServicesIndex";
@@ -27,7 +25,7 @@ function CustomRoutes() {
             element: <ServicesIndex />
         },
         {
-            path: "/services/create",
+            path: "/services/new",
             element: <ServicesCreate />
         },
         {
