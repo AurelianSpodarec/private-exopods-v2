@@ -5,7 +5,7 @@ export const configMenu = {
         {
             id: "services",
             name: "Services",
-            url: configPages.DASHBOARD.path,
+            url: configPages.SERVICES.path,
             icon: <svg width="22" height="23" viewBox="0 0 22 23" fill="none">
                 <g clip-path="url(#clip0_373_6)">
                 <path d="M12.467 8.79399H8.90512C8.41332 8.79399 8.01465 9.19267 8.01465 9.68446V13.2463C8.01465 13.7381 8.41332 14.1368 8.90512 14.1368H12.467C12.9588 14.1368 13.3575 13.7381 13.3575 13.2463V9.68446C13.3575 9.19267 12.9588 8.79399 12.467 8.79399Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
