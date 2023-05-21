@@ -7,6 +7,10 @@ import Container from "layout/Container";
 import PageHeader from "molecules/PageHeader";
 import { configPages } from "config/configPages";
 
+import { capitalizeFirstLetter } from "@/utils/common";
+import CellStatus from "./CellStatus";
+
+
 function ServiceItemTR() {
     return (
         <tr>
@@ -40,12 +44,12 @@ function ServiceItemTR() {
                     </svg>
                 </div>
             </td>
-            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                Running
-            </td>
-            <td className="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
-                <Link to={`${configPages.SERVICES.path}/google`} className="border py-2 px-3 rounded-lg text-indigo-600 hover:text-indigo-900">
-                    Manage<span className="sr-only">Catalog</span>
+            <CellStatus label="Running" status="running" />
+            <td className="whitespace-nowrap py-4 pl-3 pr-4">
+                <Link to={`${configPages.SERVICES.path}/google`} className="">
+                <svg className="h-5 text-[#665C5C] fill-[#665C5C]" viewBox="0 0 128 512">
+                    <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                </svg>
                 </Link>
             </td>
         </tr>
