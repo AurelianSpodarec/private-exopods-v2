@@ -7,11 +7,9 @@ import Container from "layout/Container";
 import PageHeader from "molecules/PageHeader";
 import { configPages } from "config/configPages";
 
-import { capitalizeFirstLetter } from "@/utils/common";
 import CellStatus from "./CellStatus";
 
-
-function ServiceItemTR() {
+function ServiceItemTR({ status }:any) {
     return (
         <tr>
             <td className="whitespace-nowrap py-4 pr-3 text-sm font-medium">
@@ -44,7 +42,7 @@ function ServiceItemTR() {
                     </svg>
                 </div>
             </td>
-            <CellStatus label="Running" status="running" />
+            <CellStatus label={status} status={status} />
             <td className="whitespace-nowrap py-4 pl-3 pr-4">
                 <Link to={`${configPages.SERVICES.path}/google`} className="">
                 <svg className="h-5 text-[#665C5C] fill-[#665C5C]" viewBox="0 0 128 512">
@@ -91,9 +89,9 @@ function ServicesIndex() {
                     </thead>
 
                     <tbody className="divide-y divide-gray-200 bg-white">
-                        <ServiceItemTR />
-                        <ServiceItemTR />
-                        <ServiceItemTR />
+                        <ServiceItemTR status="running" />
+                        <ServiceItemTR status="running" />
+                        <ServiceItemTR status="stopped" />
                     </tbody>
                 </table>
                 </div>
