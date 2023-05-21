@@ -2,8 +2,23 @@ export const configPages = {
     DASHBOARD: {
         path: "/"
     },
-    SITES: {
-        path: "/sites"
+    SERVICES: {
+        path: "/services"
+    },
+    MONITOR: {
+        path: "/monitor"
+    },
+    EXPLORE: {
+        path: "/explore"
+    },
+    NETWORK: {
+        path: "/network"
+    },
+    REGISTRY: {
+        path: "/registry"
+    },
+    DOMAINS: {
+        path: "/domains"
     },
 
     // Self-service
