@@ -26,39 +26,39 @@ function CustomRoutes() {
             element: <ServicesIndex />
         },
         {
-            path: `${configPages.SERVICES.path}/:id`,
-            element: <ServicesShow />,
+            path: `${configPages.SERVICES.path}/:id/`,
+            element: <ServicesShow  />,
             children: [
                 {
-                    path: `${configPages.SERVICES.path}/:id`,
-                    element: <Navigate to={`${configPages.SERVICES.path}/:id/logs`} replace={true}/>
+                    path: '',
+                    element: <Navigate to="logs" replace={true} />
                 },
                 {
-                    path: `${configPages.SERVICES.path}/:id${configPages.LOGS.path}`,
+                    path: "logs",
                     element: <LogsIndex />
                 },
                 {
-                    path: `${configPages.SERVICES.path}/:id${configPages.REVISION.path}`,
+                    path: "revision",
                     element: <RevisionIndex />
                 },
                 {
-                    path: `${configPages.SERVICES.path}/:id${configPages.INSPECT.path}`,
+                    path: "inspect",
                     element: <InspectIndex />
                 },
                 {
-                    path: `${configPages.SERVICES.path}/:id${configPages.FILES.path}`,
+                    path: "files",
                     element: <FilesIndex />
                 },
                 {
-                    path: `${configPages.SERVICES.path}/:id${configPages.NETWORKING.path}`,
+                    path: "networking",
                     element: <NetworkingIndex />
                 },
                 {
-                    path: `${configPages.SERVICES.path}/:id${configPages.INTEGREGATION.path}`,
+                    path: "integregation",
                     element: <IntegregationIndex />
                 },
                 {
-                    path: `${configPages.SERVICES.path}/:id${configPages.TRIGGERS.path}`,
+                    path: "triggers",
                     element: <TriggersIndex />
                 }
             ]

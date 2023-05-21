@@ -41,13 +41,13 @@ function ServicesShow() {
             <section>
                 <div>
                     <nav>
-                        <Link to={configPages.SERVICES.path + configPages.LOGS.path}>Logs</Link>
-                        <Link to={configPages.SERVICES.path + configPages.REVISION.path}>Revision</Link>
-                        <Link to={configPages.SERVICES.path + configPages.INSPECT.path}>Inspect</Link>
-                        <Link to={configPages.SERVICES.path + configPages.FILES.path}>Files</Link>
-                        <Link to={configPages.SERVICES.path + configPages.NETWORKING.path}>Networking</Link>
-                        <Link to={configPages.SERVICES.path + configPages.INTEGREGATION.path}>Integregation</Link>
-                        <Link to={configPages.SERVICES.path + configPages.TRIGGERS.path}>Triggers</Link>
+                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.LOGS.path}`}>Logs</Link>
+                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.REVISION.path}`}>Revision</Link>
+                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.INSPECT.path}`}>Inspect</Link>
+                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.FILES.path}`}>Files</Link>
+                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.NETWORKING.path}`}>Networking</Link>
+                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.INTEGREGATION.path}`}>Integregation</Link>
+                        <Link to={`${configPages.SERVICES.path}/${id}${configPages.TRIGGERS.path}`}>Triggers</Link>
                     </nav>
                 </div>
                 <div>
