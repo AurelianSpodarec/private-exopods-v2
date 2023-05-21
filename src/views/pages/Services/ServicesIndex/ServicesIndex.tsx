@@ -47,7 +47,7 @@ function ServicesIndex() {
                         <td className="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">
                         <div className="flex items-center gap-3 p-2.5 xl:p-5">
                             <div className="flex-shrink-0 w-10">
-                                <img className="h-full w-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png" alt="Brand"/>
+                                <img className="h-full w-full" src="https://i.postimg.cc/g0LrxxFR/Avatar.png" alt="Brand"/>
                             </div>
                             <div className="flex flex-col">
                                 <p className="text-lg font-semibold">Google</p>
@@ -55,9 +55,16 @@ function ServicesIndex() {
                             </div>
                         </div>
                         </td>
-                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">23</td>
-                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">103,524</td>
+                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                            <span>docker/welcome-to-docker:latest</span>
+                        </td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 hours ago</td>
+                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                            8088
+                        </td>
+                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                            Running
+                        </td>
                         <td className="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
                             <Link to={`${configPages.SERVICES.path}/google`} className="border py-2 px-3 rounded-lg text-indigo-600 hover:text-indigo-900">
                                 Manage<span className="sr-only">Google</span>
