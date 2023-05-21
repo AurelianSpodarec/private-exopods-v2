@@ -14,6 +14,7 @@ import FilesIndex from "pages/Services/ServicesShow/Files/FilesIndex";
 import NetworkingIndex from "pages/Services/ServicesShow/Networking/NetworkingIndex";
 import IntegregationIndex from "pages/Services/ServicesShow/Integregation/IntegregationIndex";
 import TriggersIndex from "pages/Services/ServicesShow/Triggers/TriggersIndex";
+import ServicesCreate from "pages/Services/ServicesCreate/ServicesCreate";
 
 function CustomRoutes() {
     let routes = useRoutes([
@@ -24,6 +25,10 @@ function CustomRoutes() {
         {
             path: "/services",
             element: <ServicesIndex />
+        },
+        {
+            path: "/services/create",
+            element: <ServicesCreate />
         },
         {
             path: `${configPages.SERVICES.path}/:id/`,

@@ -66,8 +66,8 @@ function ServicesIndex() {
                         <th scope="col" className="text-left bg-[#F5F5F7]">Image</th>
                         <th scope="col" className="text-left bg-[#F5F5F7]">Last Updated</th>
                         <th scope="col" className="text-left bg-[#F5F5F7]">Port(S)</th>
-                        <th scope="col" className="text-left bg-[#F5F5F7] rounded-tr-2xl rounded-br-2xl">Status</th>
-                        <th scope="col" className="relative  pl-3 pr-4 sm:pr-3">
+                        <th scope="col" className="text-left bg-[#F5F5F7]">Status</th>
+                        <th scope="col" className="text-left bg-[#F5F5F7] rounded-tr-2xl rounded-br-2xl pl-3">
                             <span className="sr-only">Manage</span>
                         </th>
                     </tr>
