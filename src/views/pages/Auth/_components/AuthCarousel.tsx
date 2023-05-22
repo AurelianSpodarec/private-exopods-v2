@@ -1,21 +1,37 @@
 import carouselBG from './../../../../assets/images/carousel-bg.png';
 import shapes from './../../../../assets/images/shapes.png';
 
+function CarouselDot({ onClick, isActive }:any) {
+    return (
+        <button type="button" onClick={onClick} className={`h-1.5 rounded-full ${isActive ? "w-5 bg-white" : " w-1.5 bg-[#6d6d6d]"}`}>
+            <span className="sr-only">Navigate to item 1</span>
+        </button>
+    )
+}
+
 function AuthCarousel() {
     return (
         <div className="h-full w-full relative">   
         <div className="px-6 py-8 h-full w-full bg-cover rounded-3xl" style={{ backgroundImage:`url(${carouselBG})` }}>
+        <div className="flex flex-col h-full">
 
-            <header>
+            <header className="mb-auto">
                 <img src={shapes} />
             </header>
 
-            <section>
-                <h3 className="text-white text-4xl font-semibold">100% Uptime😎</h3>
-                <p className="text-[#BFBFBF] text-3xl">Zero Infrastructure Management</p>
+            <section className="mt-auto">
+                <div className="mb-8">
+                    <h3 className="text-white text-4xl font-semibold">100% Uptime😎</h3>
+                    <p className="text-[#BFBFBF] text-3xl">Zero Infrastructure <br/>Management</p>
+                </div>
+                <div className="flex space-x-1.5">
+                    <CarouselDot isActive={true} />
+                    <CarouselDot />
+                    <CarouselDot />
+                </div>
             </section>
 
-            <footer className="mt-auto">
+            <footer className="mt-20">
             <div className="flex justify-between items-center">
 
                 <div className="flex items-center justify-between text-[#BFBFBF] fill-[#BFBFBF] space-x-1">
@@ -41,6 +57,7 @@ function AuthCarousel() {
             </div>
             </footer>
 
+        </div>
         </div>
         </div>
     )
