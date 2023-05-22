@@ -54,8 +54,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                         value={value}
                         onChange={onChange}
                         className={`
-                            block w-full placeholder:text-gray-400 appearance-none rounded border border-gray-300 px-3 py-3 placeholder-gray-800 text-black shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-md
-                            mt-1 ${className ? className : ''} 
+                            border border-[#464660] px-5 py-4 rounded-lg w-full
+                            ${className ? className : ''} 
                         `.trim()}
                         disabled={disabled}
                         aria-label={ariaLabel}
