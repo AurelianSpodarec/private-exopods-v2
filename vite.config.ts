@@ -15,6 +15,7 @@ export default defineConfig({
         alias: {
             assets: `${path.resolve(__dirname, "./src/assets/")}`,
             config: `${path.resolve(__dirname, "./src/config/")}`,
+            context: `${path.resolve(__dirname, "./src/context/")}`,
             styles: `${path.resolve(__dirname, "./src/styles/")}`,
             
             layout: `${path.resolve(__dirname, "./src/views/_layout/")}`,

@@ -1,42 +1,51 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate, useNavigate } from "react-router-dom";
 
-import { AuthCard, AuthFooter, AuthHeader, AuthSocials } from "./_components";
+import { AuthCard, AuthFooter, AuthForm, AuthHeader } from "./_components";
+
 import Input from "atoms/Input";
 import Button from "atoms/Button/Button";
-
+import { configPages } from "config/configPages";
+import useAuth from "context/AuthContext/useAuth";
 
 function Login() {
+    const navigate = useNavigate();
+    const { setUser } = useAuth();
+
+    function handlerLogin() {
+        setUser({
+            name: "Hi",
+        })
+        
+        navigate(configPages.DASHBOARD.path);
+    }
+
     return (
        <>
             <AuthHeader title="Welcome <span class='text-[#08A593]'>Back</span>" description="Glad to see you, Again!" />
 
             <AuthCard>
-                <form action="#" method="POST">
+                <AuthForm>
+                    <form action="#" method="POST">
                     <div className="space-y-6">
                         <div>
-                            <Input placeholder="Enter your email" id="email" name="email" type="email" autoComplete="email" required />
+                            <Input placeholder="Your email" id="email" name="email" type="email" autoComplete="email" required />
                         </div>
                         <div>
-                            <Input placeholder="Enter your password" id="password" name="password" type="password" required />
+                            <Input placeholder="Your password" id="password" name="password" type="password" autoComplete="password" required />
                         </div>
                     </div>
-               
-                    <div className="pt-16">
-                    <Button type="submit" size="lg" shadow className="block w-full bg-[#020100]">Log In</Button>
-                    </div>
-                </form>
+                    </form>
+                </AuthForm>
 
-
+                <Button onClick={() => handlerLogin()} type="submit" size="lg" shadow className="block w-full bg-[#020100]">Log In</Button>
             </AuthCard>
 
 
             <AuthFooter>
-
                 Don't have an account yet?{' '}
-                <NavLink to="/auth/register" className="font-semibold leading-6 text-[#08A593]">
+                <NavLink to={configPages.DASHBOARD.path + configPages.AUTH.path + configPages.REGISTER.path} className="font-semibold leading-6 text-[#08A593]">
                     Sign Up
                 </NavLink>
-
             </AuthFooter>
         </>
     )
