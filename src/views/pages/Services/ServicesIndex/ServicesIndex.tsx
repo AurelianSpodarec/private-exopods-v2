@@ -13,7 +13,7 @@ import CellLink from "./CellLink";
 function ServiceItemTR({ status }:any) {
     return (
         <tr>
-            <td className="whitespace-nowrap py-4 pr-3 text-sm font-medium">
+            <td className="whitespace-nowrap py-2 pr-3 text-sm font-medium">
             <div className="flex items-center gap-3 p-2.5 xl:p-5">
                 <div className="flex-shrink-0 w-10 h-10">
                     <img className="h-full w-full" src="https://i.postimg.cc/g0LrxxFR/Avatar.png" alt="Brand"/>

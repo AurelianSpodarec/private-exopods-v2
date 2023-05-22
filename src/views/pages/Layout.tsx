@@ -4,20 +4,20 @@ import CustomRoutes from "config/CustomRoutes";
 import Navigation from "./_components/Navigation/Navigation";
 import Header from "./_components/Header/Header";
 import AuthIndex from "./Auth/AuthIndex";
+import { useState } from "react";
 
 function Layout() {
 
- 
+    // const [auth] = useState(true)
+
+    // if(auth) return <AuthIndex />
         return (
             <BrowserRouter>
-
-
-                {/* <AuthIndex /> */}
-
-
+ <AuthIndex />
+{/* TODO: remove spacing from auth */}
 
             {/* TODO: Separatee auth and Dashboard Layout */}
-            <div className="relative h-full ">
+            {/* <div className="relative h-full ">
 
                 <div id="context-wrap" className={`flex flex-col h-full`}> 
 
@@ -33,7 +33,7 @@ function Layout() {
 
                 </div>
 
-            </div>
+            </div> */}
         </BrowserRouter>
     )
 }

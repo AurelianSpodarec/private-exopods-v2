@@ -1,7 +1,7 @@
-import { configPages } from "./configPages";
+import { configPages } from "../configPages";
 
 export const configMenu = {
-    navigation: [
+    primary: [
         {
             id: "services",
             name: "Services",

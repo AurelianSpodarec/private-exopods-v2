@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { configApp } from "config/configApp";
-import { configMenu } from "config/configMenu";
+import { configMenu } from "config/menu/menuConfig";
 
 import NavList from "./_components/NavList";
 
@@ -32,7 +32,7 @@ function Navigation() {
             </div>
 
             <div className="flex flex-col flex-1 h-full overflow-y-auto sidebar-scrollbar">
-                <NavList data={configMenu.navigation} />
+                <NavList data={configMenu.primary} />
                 <NavList data={configMenu.secondary} bottom/>
             </div>
 
