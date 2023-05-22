@@ -1,23 +1,23 @@
 import { Outlet } from "react-router-dom";
+import Login from "./Login";
+import AuthCarousel from "./_components/AuthCarousel";
 
 function AuthIndex() {
     return (
-        <div>
-        <div className="grid grid-col-12">
+        <div className="grid grid-cols-12 p-6 h-full">
 
             <div className="col-span-6">
-                <div className="bg-green-100 h-full w-full">
-                    Side
-                </div>
+                <AuthCarousel />
             </div>
 
             <div className="col-span-6">
                 <div className="flex min-h-full flex-1 flex-col justify-center py-12 ">
-                    <Outlet />
+                    {/* <Outlet /> */}
+
+                    <Login />
                 </div>
             </div>
 
-        </div>
         </div>
     )
 }

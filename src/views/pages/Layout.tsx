@@ -3,29 +3,35 @@ import { BrowserRouter } from "react-router-dom";
 import CustomRoutes from "config/CustomRoutes";
 import Navigation from "./_components/Navigation/Navigation";
 import Header from "./_components/Header/Header";
-
+import AuthIndex from "./Auth/AuthIndex";
 
 function Layout() {
-    
-    return (
-        <BrowserRouter>
-        <div className="relative h-full ">
 
-            <div id="context-wrap" className={`flex flex-col h-full`}> 
+ 
+        return (
+            <BrowserRouter>
+            <AuthIndex />
 
-                <Navigation />
 
-                <div className={`flex pl-[104px] flex-col h-full relative mt-8`}>
 
-                    <Header />
-                    <main className="h-full w-full">
-                        <CustomRoutes />
-                    </main>      
-                </div>            
+            {/* TODO: Separatee auth and Dashboard Layout */}
+            {/* <div className="relative h-full ">
 
-            </div>
+                <div id="context-wrap" className={`flex flex-col h-full`}> 
 
-        </div>
+                    <Navigation />
+
+                    <div className={`flex pl-[104px] flex-col h-full relative mt-8`}>
+
+                        <Header />
+                        <main className="h-full w-full">
+                            <CustomRoutes />
+                        </main>      
+                    </div>            
+
+                </div>
+
+            </div> */}
         </BrowserRouter>
     )
 }

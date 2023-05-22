@@ -13,6 +13,9 @@ import NetworkingIndex from "pages/Services/ServicesShow/Networking/NetworkingIn
 import IntegregationIndex from "pages/Services/ServicesShow/Integregation/IntegregationIndex";
 import TriggersIndex from "pages/Services/ServicesShow/Triggers/TriggersIndex";
 import ServicesCreate from "pages/Services/ServicesCreate/ServicesCreate";
+import AuthIndex from "pages/Auth/AuthIndex";
+import Login from "pages/Auth/Login";
+import Register from "pages/Auth/Register";
 
 function CustomRoutes() {
     let routes = useRoutes([
@@ -66,6 +69,25 @@ function CustomRoutes() {
                 }
             ]
         },
+
+         // ====================================================
+        // CustomRoutes: Auth
+        // ====================================================
+        {
+            path: configPages.AUTH.path,
+            element: <AuthIndex />,
+            children :[
+                {
+                    path: configPages.AUTH.path + configPages.LOGIN.path,
+                    element: <Login />
+                },
+                {
+                    path: configPages.AUTH.path + configPages.REGISTER.path,
+                    element: <Register />
+                }
+            ]
+        },
+        
         // ====================================================
         // CustomRoutes: Self Service
         // ====================================================

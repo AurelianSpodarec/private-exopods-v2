@@ -56,6 +56,9 @@ export const configPages = {
 
     // Authentication Gate
     // ====================================================
+    AUTH: {
+        path: "/auth"
+    },
     LOGIN: {
         path: "/login"
     },
