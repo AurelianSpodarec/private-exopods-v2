@@ -1,7 +1,7 @@
 function AuthContent({ children }:any) {
     return (
-        <div className="mt-10 sm:mx-auto w-full">
-        <div className="bg-white py-12 px-40 shadow sm:rounded-lg">
+        <div className="sm:mx-auto w-full">
+        <div className="bg-white py-10 px-8 lg:px-20 xl:px-40 sm:rounded-lg">
 
             {children}
 
