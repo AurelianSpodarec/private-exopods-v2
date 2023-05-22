@@ -8,7 +8,7 @@ import Button from "atoms/Button/Button";
 function Login() {
     return (
        <>
-            <AuthHeader title="Welcome Back" description="Glad to see you, Again!" />
+            <AuthHeader title="Welcome <span class='text-[#08A593]'>Back</span>" description="Glad to see you, Again!" />
 
             <AuthCard>
                 <form action="#" method="POST">
