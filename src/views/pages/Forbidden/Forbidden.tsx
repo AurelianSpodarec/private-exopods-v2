@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 import { configPages } from "config/configPages"
 
-import Container from "layout/Container"
+import Container from "atoms/Container"
 
 function Forbidden() {
     return (

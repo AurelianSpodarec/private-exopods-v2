@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Container from "layout/Container";
+import Container from "atoms/Container";
 import Card from "atoms/Card";
 
 function GetStartedContainer() {

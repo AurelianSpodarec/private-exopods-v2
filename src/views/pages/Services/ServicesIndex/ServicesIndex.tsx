@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import GetStartedContainer from "../_sections/GetStartedContainer";
 
-import Container from "layout/Container";
+import Container from "atoms/Container";
 import PageHeader from "molecules/PageHeader";
 import { configPages } from "config/configPages";
 

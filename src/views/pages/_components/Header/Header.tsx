@@ -1,4 +1,4 @@
-import Container from "layout/Container";
+import Container from "atoms/Container";
 
 function Header() {
     return (

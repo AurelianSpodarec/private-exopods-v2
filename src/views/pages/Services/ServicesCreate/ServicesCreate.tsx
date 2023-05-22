@@ -1,6 +1,6 @@
 import Button from "atoms/Button/Button";
 import Input from "atoms/Input";
-import Container from "layout/Container";
+import Container from "atoms/Container";
 import PageHeader from "molecules/PageHeader";
 
 // TODO: Refactor once API ready
