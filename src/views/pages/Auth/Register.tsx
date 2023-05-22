@@ -32,7 +32,7 @@ function Register() {
                         </div>
                     </div>
 
-                    <div className="mt-2">
+                    <div className="mt-4">
                         Creating an account means you’re okay with our <Link to="/" className="text-[#1A73E8]">Terms of Service</Link>, <Link to="/" className="text-[#1A73E8]">Privacy Policy</Link>, and our default <Link to="/" className="text-[#1A73E8]">Notification Settings</Link>.
                     </div>
                

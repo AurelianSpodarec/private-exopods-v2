@@ -10,12 +10,14 @@ function Layout() {
  
         return (
             <BrowserRouter>
-            <AuthIndex />
+
+
+                {/* <AuthIndex /> */}
 
 
 
             {/* TODO: Separatee auth and Dashboard Layout */}
-            {/* <div className="relative h-full ">
+            <div className="relative h-full ">
 
                 <div id="context-wrap" className={`flex flex-col h-full`}> 
 
@@ -31,7 +33,7 @@ function Layout() {
 
                 </div>
 
-            </div> */}
+            </div>
         </BrowserRouter>
     )
 }
