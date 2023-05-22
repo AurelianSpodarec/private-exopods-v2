@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Login from "./Login";
 import AuthCarousel from "./_components/AuthCarousel";
+import Register from "./Register";
 
 function AuthIndex() {
     return (
@@ -14,7 +15,8 @@ function AuthIndex() {
                 <div className="flex min-h-full flex-1 flex-col justify-center py-12 ">
                     {/* <Outlet /> */}
 
-                    <Login />
+                    {/* <Login /> */}
+                    <Register />
                 </div>
             </div>
 

@@ -1,70 +1,56 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { AuthCard, AuthFooter, AuthHeader, AuthSocials } from "./_components";
 import Input from "atoms/Input";
+import Button from "atoms/Button/Button";
+
 
 function Register() {
     return (
-        <>
-            <AuthHeader title="Sign in to your account" />
+       <>
+            <AuthHeader title="Create Your <span class='text-[#08A593]'>Account</span>" />
 
             <AuthCard>
-                <form className="space-y-6" action="#" method="POST">
-                    <div className="grid grid-cols-2 gap-4">
-                        <Input placeholder="First name" id="firstName" name="lastName" type="text"  />
-                        <Input placeholder="Last name" id="lastName" name="lastName" type="text"/>
-                    </div>
-                    <div>
-                        <Input placeholder="Enter your email" id="email" name="email" type="email" autoComplete="email" required />
-                    </div>
-                    <div>
-                        <Input placeholder="Enter your password" id="password" name="password" type="password" required />
-                    </div>
-                    <div>
-                        <Input placeholder="Confirm your password" id="confirmPassword" name="configmPassword" type="password" required />
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                            <input
-                            id="remember-me"
-                            name="remember-me"
-                            type="checkbox"
-                            className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                            />
-                            <label htmlFor="remember-me" className="ml-3 block text-sm leading-6 text-gray-900">
-                            Remember me
-                            </label>
+                <form action="#" method="POST">
+                    <div className="space-y-6">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <Input placeholder="First Name" id="firstName" name="firstName" type="text" required />
+                            </div>
+                            <div>
+                                <Input placeholder="Last Name" id="lastName" name="lastName" type="text" required />
+                            </div>
                         </div>
-
-                        <div className="text-sm leading-6">
-                            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                            Forgot password?
-                            </a>
+                        <div>
+                            <Input placeholder="Enter your email" id="email" name="email" type="email" autoComplete="email" required />
+                        </div>
+                        <div>
+                            <Input placeholder="Enter your password" id="password" name="password" type="password" required />
+                        </div>
+                        <div>
+                            <Input placeholder="Confirm your password" id="confirmPassword" name="confirmPassword" type="password" required />
                         </div>
                     </div>
 
-
-                    <div>
-                    <button
-                        type="submit"
-                        className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                        Create account
-                    </button>
+                    <div className="mt-2">
+                        Creating an account means you’re okay with our <Link to="/" className="text-[#1A73E8]">Terms of Service</Link>, <Link to="/" className="text-[#1A73E8]">Privacy Policy</Link>, and our default <Link to="/" className="text-[#1A73E8]">Notification Settings</Link>.
+                    </div>
+               
+                    <div className="pt-16">
+                        <Button type="submit" size="lg" shadow className="block w-full bg-[#020100]">Create account</Button>
                     </div>
                 </form>
 
-                <AuthSocials />
 
             </AuthCard>
 
 
             <AuthFooter>
-            Already have an account?{' '}
-            <NavLink to="/auth/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                Log in
-            </NavLink>
+
+                Already have an account{' '}
+                <NavLink to="/auth/register" className="font-semibold leading-6 text-[#08A593]">
+                    Log in
+                </NavLink>
 
             </AuthFooter>
         </>
@@ -72,3 +58,4 @@ function Register() {
 }
 
 export default Register;
+
