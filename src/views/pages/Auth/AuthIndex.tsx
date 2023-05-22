@@ -4,7 +4,7 @@ import AuthCarousel from "./_components/AuthCarousel";
 
 function AuthIndex() {
     return (
-        <div className="grid grid-cols-12 p-6 h-full">
+        <div className="grid grid-cols-12 py-6 pl-6 h-full">
 
             <div className="col-span-6">
                 <AuthCarousel />
