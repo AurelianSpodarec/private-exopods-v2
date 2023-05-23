@@ -16,9 +16,9 @@ export function DropdownTrigger({ children }:any) {
     )
 }
 
-export function DropdownMenuWrap({ children, align = "end" }:any) {
+export function DropdownMenuWrap({ children, className, align = "end" }:any) {
     return (
-        <DropdownMenu.Content align={align} className="rounded-xl shadow-[0_4px_14px_rgba(0,0,0,0.1)] bg-white">
+        <DropdownMenu.Content align={align} className={`${className ? className : ""} rounded-xl shadow-[0_4px_14px_rgba(0,0,0,0.1)] bg-white`}>
             {children}
         </DropdownMenu.Content>
     )
