@@ -1,4 +1,5 @@
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
 import carouselBG from './../../../../assets/images/carousel-bg.png';
@@ -27,34 +28,39 @@ function AuthCarousel() {
 
             <section className="mt-auto">
                 <div className="mb-8">
-                {/* <Carousel   
+                <Carousel   
                     autoPlay
                     infiniteLoop
+                    
                     showArrows={false}
                 >
                     <div>
                         <h3 className="text-white text-4xl font-semibold">100% Uptime😎</h3>
-                        <p className="text-[#BFBFBF] text-3xl">Zero Infrastructure <br/>Management</p>
+                        <p className="text-[#BFBFBF] text-2xl">Zero Infrastructure <br/>Management</p>
                     </div>
                     <div>
-                        <h3 className="text-white text-4xl font-semibold">100% Uptime😎</h3>
-                        <p className="text-[#BFBFBF] text-3xl">Zero Infrastructure <br/>Management</p>
-                    </div> */}
+                        <p className="text-[#BFBFBF] text-2xl">Scale to millions in minutes</p>
+                        <h3 className="text-white text-4xl font-semibold">Minutes🚀</h3>
+
+
+
+
+                    </div> 
                     <div>
-                        <h3 className="text-white text-4xl font-semibold">100% Uptime😎</h3>
-                        <p className="text-[#BFBFBF] text-3xl">Zero Infrastructure <br/>Management</p>
+                        <h3 className="text-white text-4xl font-semibold">Reduce carbon </h3>
+                        <p className="text-[#BFBFBF] text-2xl">footprint by choosing <br/>serverless🌿</p>
                     </div>
-                {/* </Carousel> */}
+                </Carousel>
                 </div>
 
-                <div className="flex space-x-1.5">
+                {/* <div className="flex space-x-1.5">
                     {[0, 1, 2].map((index) => (
                     <CarouselDot
                         key={index}
                     
                     />
                     ))}
-                </div>
+                </div> */}
             </section>
 
             <footer className="mt-20">
