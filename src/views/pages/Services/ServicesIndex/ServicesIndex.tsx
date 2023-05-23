@@ -11,6 +11,7 @@ import CellStatus from "./CellStatus";
 import CellLink from "./CellLink";
 import Button from "atoms/Button/Button";
 import Input from "atoms/Input";
+import { DropdownItem, DropdownMenuWrap, DropdownRoot, DropdownTrigger } from "molecules/Dropdown";
 
 function ServiceItemTR({ status }:any) {
     return (
@@ -31,11 +32,30 @@ function ServiceItemTR({ status }:any) {
             <CellLink label="8088" />
             <CellStatus label={status} status={status} />
             <td className="whitespace-nowrap py-4 pl-3 pr-4">
-                <Link to={`${configPages.SERVICES.path}/google`} className="">
-                <svg className="h-5 text-[#665C5C] fill-[#665C5C]" viewBox="0 0 128 512">
-                    <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
-                </svg>
-                </Link>
+                <DropdownRoot>
+                    <DropdownTrigger>
+                        <svg className="h-8 px-4 py-2 text-[#665C5C] fill-[#665C5C]" viewBox="0 0 128 512">
+                            <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                        </svg>
+                    </DropdownTrigger>
+
+                    <DropdownMenuWrap>
+                        <DropdownItem>
+                        <Link to={`${configPages.SERVICES.path}/google`} className="h-full w-full p-4">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                                    <path d="M7.5 0C12.1875 0 15 5.5 15 5.5C15 5.5 12.1875 11 7.5 11C2.8125 11 0 5.5 0 5.5C0 5.5 2.8125 0 7.5 0ZM7.5 1C4.2 1 1.87312 4.251 1.10156 5.5C1.87219 6.748 4.19906 10 7.5 10C10.8 10 13.1269 6.749 13.8984 5.5C13.1278 4.252 10.8009 1 7.5 1ZM7.5 2C8.37024 2 9.20484 2.36875 9.82019 3.02513C10.4355 3.6815 10.7812 4.57174 10.7812 5.5C10.7812 6.42826 10.4355 7.3185 9.82019 7.97487C9.20484 8.63125 8.37024 9 7.5 9C6.62976 9 5.79516 8.63125 5.17981 7.97487C4.56445 7.3185 4.21875 6.42826 4.21875 5.5C4.21875 4.57174 4.56445 3.6815 5.17981 3.02513C5.79516 2.36875 6.62976 2 7.5 2ZM7.5 3C6.87863 3.00079 6.28292 3.26444 5.84354 3.73311C5.40416 4.20178 5.15699 4.8372 5.15625 5.5C5.15625 6.878 6.20719 8 7.5 8C8.79281 8 9.84375 6.878 9.84375 5.5C9.84375 4.122 8.79281 3 7.5 3Z" fill="#C2C2C2"/>
+                                </svg>
+                            </div>
+                            <span>
+                                View Detailsss    
+                            </span>
+                        </div>
+                        </Link>
+                        </DropdownItem>
+                    </DropdownMenuWrap>    
+                </DropdownRoot>
             </td>
         </tr>
     )
