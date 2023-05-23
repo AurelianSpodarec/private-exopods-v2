@@ -43,7 +43,7 @@ function Login() {
 
             <AuthFooter>
                 Don't have an account yet?{' '}
-                <NavLink to={configPages.DASHBOARD.path + configPages.AUTH.path + configPages.REGISTER.path} className="font-semibold leading-6 text-[#08A593]">
+                <NavLink to={configPages.AUTH.path + configPages.REGISTER.path} className="font-semibold leading-6 text-[#08A593]">
                     Sign Up
                 </NavLink>
             </AuthFooter>

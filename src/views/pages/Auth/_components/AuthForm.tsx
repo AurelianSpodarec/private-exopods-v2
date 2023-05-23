@@ -1,6 +1,6 @@
 function AuthForm({ children }:any) {
     return (
-        <div className="mb-12">
+        <div className="mb-8">
             {children}
         </div>
     )

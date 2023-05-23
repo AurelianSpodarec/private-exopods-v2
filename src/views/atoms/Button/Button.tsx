@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
  function Button(props:ButtonProps) {
     const {
         children,
@@ -65,7 +67,7 @@ interface ButtonProps {
     onClick?: any;
     ref?: any;
     label?: string;
-    as?: string | "a" | "button";
+    as?: string | "a" | "button" | "NavLink" | "Link";
     variant?: string | "primary" | "secondary" | "link" | "success" | "warning" | "danger" | "info";
     kind?: string | "solid" | "outline" | "ghost" | "subtle";
     type?: string | "submit" | "button" | "reset";

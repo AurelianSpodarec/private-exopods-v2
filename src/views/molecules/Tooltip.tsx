@@ -56,7 +56,7 @@ function Tooltip(props: TooltipProps) {
     }
     
     return (
-        <div className="relative w-full h-full">
+        <div className=" w-full h-full">
             <div
                 className="group-hover w-full h-full"
                 onMouseEnter={handleMouseEnter}

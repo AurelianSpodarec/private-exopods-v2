@@ -17,7 +17,7 @@ function AuthCarousel() {
     
 
     return (
-        <div className="h-full w-full relative">   
+        <div className="h-full w-full relative p-6">   
         <div className="px-6 py-8 h-full w-full bg-cover rounded-3xl" style={{ backgroundImage:`url(${carouselBG})` }}>
         <div className="flex flex-col h-full">
 

@@ -9,12 +9,14 @@ import { configPages } from "config/configPages";
 
 import CellStatus from "./CellStatus";
 import CellLink from "./CellLink";
+import Button from "atoms/Button/Button";
+import Input from "atoms/Input";
 
 function ServiceItemTR({ status }:any) {
     return (
         <tr>
-            <td className="whitespace-nowrap py-2 pr-3 text-sm font-medium">
-            <div className="flex items-center gap-3 p-2.5 xl:p-5">
+            <td className="whitespace-nowrap pr-3 text-sm font-medium">
+            <div className="flex items-center gap-3 px-2.5 xl:p-5">
                 <div className="flex-shrink-0 w-10 h-10">
                     <img className="h-full w-full" src="https://i.postimg.cc/g0LrxxFR/Avatar.png" alt="Brand"/>
                 </div>
@@ -115,9 +117,17 @@ function ServicesIndex() {
 
             </div>
 
-            <div className="flex items-center">
-                <input placeholder="Search container" />
-                <NavLink to="/services/new">New Container</NavLink>
+            <div className="flex items-center space-x-6">
+
+                <Input placeholder="Search container" type="text" className="bg-[#F5F5F7] py-2 px-12 pl-10 h-10 border-0" iconLeft={`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M17.5 18L13.875 14.375M15.8333 9.66667C15.8333 13.3486 12.8486 16.3333 9.16667 16.3333C5.48477 16.3333 2.5 13.3486 2.5 9.66667C2.5 5.98477 5.48477 3 9.16667 3C12.8486 3 15.8333 5.98477 15.8333 9.66667Z" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                `}/>
+
+                <Button>
+                    <NavLink to="/services/new">New Container</NavLink>
+                </Button>
             </div>
         </div>
         </section>
@@ -149,6 +159,10 @@ function ServicesIndex() {
                         <ServiceItemTR status="running" />
                         <ServiceItemTR status="running" />
                         <ServiceItemTR status="stopped" />
+                        <ServiceItemTR status="running" />
+                        <ServiceItemTR status="running" />
+                        <ServiceItemTR status="stopped" />
+                        <ServiceItemTR status="running" />
                     </tbody>
                 </table>
                 </div>

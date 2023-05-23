@@ -1,10 +1,12 @@
+import AuthCarousel from "pages/Auth/_components/AuthCarousel";
 import { Outlet } from "react-router-dom";
 
 function LayoutAuth() {
     return (
-        <div className="grid grid-cols-12 py-6 pl-6 h-full">
+        <div className="grid grid-cols-12 h-full">
 
             <div className="col-span-6">
+                <AuthCarousel />
             </div>
 
             <div className="col-span-6">

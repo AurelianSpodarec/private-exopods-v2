@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
-import { AuthCard, AuthFooter, AuthHeader, AuthSocials } from "./_components";
+import { AuthCard, AuthFooter, AuthHeader, AuthForm } from "./_components";
 import Input from "atoms/Input";
 import Button from "atoms/Button/Button";
 
@@ -11,6 +11,7 @@ function Register() {
             <AuthHeader title="Create Your <span class='text-[#08A593]'>Account</span>" />
 
             <AuthCard>
+                <AuthForm>
                 <form action="#" method="POST">
                     <div className="space-y-6">
                         <div className="grid grid-cols-2 gap-4">
@@ -36,19 +37,17 @@ function Register() {
                         Creating an account means you’re okay with our <Link to="/" className="text-[#1A73E8]">Terms of Service</Link>, <Link to="/" className="text-[#1A73E8]">Privacy Policy</Link>, and our default <Link to="/" className="text-[#1A73E8]">Notification Settings</Link>.
                     </div>
                
-                    <div className="pt-16">
-                        <Button type="submit" size="lg" shadow className="block w-full bg-[#020100]">Create account</Button>
-                    </div>
                 </form>
+                </AuthForm>
 
-
+                <Button type="submit" size="lg" shadow className="block w-full bg-[#020100]">Create account</Button>
             </AuthCard>
 
 
             <AuthFooter>
 
                 Already have an account{' '}
-                <NavLink to="/auth/register" className="font-semibold leading-6 text-[#08A593]">
+                <NavLink to="/auth/login" className="font-semibold leading-6 text-[#08A593]">
                     Log in
                 </NavLink>
 

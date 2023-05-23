@@ -21,11 +21,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         helperText,
         value,
         onChange,
+        iconLeft,
         iconRight,
         autofocus,
         optional,
         ariaLabel,
-        as = "Input",
+        as = "input",
         ...props
     }) => {
         const [showPassword, setShowPassword] = useState(false);
@@ -88,6 +89,13 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                         />
                     )}
 
+                    {iconLeft && (
+                        <div
+                            className="absolute z-10 left-3 top-1/2 -translate-y-1/2"
+                            dangerouslySetInnerHTML={{ __html: iconLeft }}
+                        />
+                    )}
+
                 </div>
             </div>
         );
@@ -117,6 +125,7 @@ interface InputProps {
     value?: any;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     iconRight?: any;
+    iconLeft?: any;
     autofocus?: boolean;
     optional?: boolean;
     ariaLabel?: string;

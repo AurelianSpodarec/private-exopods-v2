@@ -31,7 +31,7 @@ function Navigation() {
                 </Link>
             </div>
 
-            <div className="flex flex-col flex-1 h-full overflow-y-auto sidebar-scrollbar">
+            <div className="flex flex-col relative overflow-x-hidden flex-1 h-full overflow-y-auto sidebar-scrollbar">
                 <NavList data={configMenu.primary} />
                 <NavList data={configMenu.secondary} bottom/>
             </div>

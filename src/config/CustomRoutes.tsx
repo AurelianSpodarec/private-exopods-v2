@@ -8,18 +8,18 @@ import { configPages } from "config/configPages";
 // Services
 // -----------------
 import ServicesIndex from "pages/Services/ServicesIndex/ServicesIndex";
-import ServicesCreate from "pages/Services/ServicesCreate/ServicesCreate";
 import ServicesShow from "pages/Services/ServicesShow/ServicesShow";
+import ServicesCreate from "pages/Services/ServicesCreate/ServicesCreate";
 
 // Networking
 // -----------------
 import NetworkingIndex from "pages/Services/ServicesShow/Networking/NetworkingIndex";
-import LogsIndex from "pages/Services/ServicesShow/Logs/LogsIndex";
-import RevisionIndex from "pages/Services/ServicesShow/Revision/RevisionIndex";
-import InspectIndex from "pages/Services/ServicesShow/Inspect/InspectIndex";
-import FilesIndex from "pages/Services/ServicesShow/Files/FilesIndex";
-import IntegregationIndex from "pages/Services/ServicesShow/Integregation/IntegregationIndex";
-import TriggersIndex from "pages/Services/ServicesShow/Triggers/TriggersIndex";
+    import LogsIndex from "pages/Services/ServicesShow/Logs/LogsIndex";
+    import RevisionIndex from "pages/Services/ServicesShow/Revision/RevisionIndex";
+    import InspectIndex from "pages/Services/ServicesShow/Inspect/InspectIndex";
+    import FilesIndex from "pages/Services/ServicesShow/Files/FilesIndex";
+    import IntegregationIndex from "pages/Services/ServicesShow/Integregation/IntegregationIndex";
+    import TriggersIndex from "pages/Services/ServicesShow/Triggers/TriggersIndex";
 
 
 // ===========================================================
@@ -33,13 +33,15 @@ import Register from "pages/Auth/Register";
 // Other 
 // ===========================================================
 
-// NOT ALLOWED
-import Forbidden from "pages/Forbidden/Forbidden";
-import NotFound from "pages/NotFound/NotFound";
-
 // LAYOUT
+// -----------------
 import LayoutAuth from "pages/_layout/LayoutAuth";
 import LayoutDashboard from "pages/_layout/LayoutDashboard";
+
+// NOT ALLOWED
+// -----------------
+import Forbidden from "pages/Forbidden/Forbidden";
+import NotFound from "pages/NotFound/NotFound";
 
 
 function CustomRoutes() {
