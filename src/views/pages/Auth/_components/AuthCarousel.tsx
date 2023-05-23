@@ -31,7 +31,7 @@ function AuthCarousel() {
                 <Carousel   
                     autoPlay
                     infiniteLoop
-                    
+                    interval={3000}
                     showArrows={false}
                 >
                     <div>
