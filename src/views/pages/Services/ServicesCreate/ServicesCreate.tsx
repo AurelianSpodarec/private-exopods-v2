@@ -2,6 +2,7 @@ import Button from "atoms/Button/Button";
 import Input from "atoms/Input";
 import Container from "atoms/Container";
 import PageHeader from "molecules/PageHeader";
+import { useState } from "react";
 
 // TODO: Refactor once API ready
 function Box() {
@@ -17,7 +18,42 @@ function Box() {
     )
 }
 
+
+function RenderEnv({ onClick }:any) {
+    return (
+        <div className="flex items-center">
+            <div className="grid grid-cols-2 gap-10">
+            <div>
+                <Input placeholder="Key"/>
+            </div>
+            <div>
+                <Input placeholder="Value"/>
+            </div>
+            </div>
+            
+            <button type="button" onClick={onClick} className="ml-4" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <path d="M7.5 13.625V1.375" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.375 7.5H13.625" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
+        </div>
+    )
+}
+
 function ServicesCreate() {
+
+    const [env, setEnv] = useState([]);
+
+
+    function addEnvFile() {
+        setEnv((prevEnv) => [
+          ...prevEnv,
+          { name: 'env' }
+        ]);
+      }
+
+
     return (
         <Container>
 
@@ -89,23 +125,15 @@ function ServicesCreate() {
                     </div>
 
                     <div>
-                        <div className="flex items-center">
-                            <div className="grid grid-cols-2 gap-10">
-                            <div>
-                                <Input placeholder="Key"/>
-                            </div>
-                            <div>
-                                <Input placeholder="Value"/>
-                            </div>
-                            </div>
-                            
-                            <button type="button" className="ml-4" >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                <path d="M7.5 13.625V1.375" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M1.375 7.5H13.625" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </button>
+                  
+                        <div className="space-y-10">
+                        <RenderEnv onClick={() => addEnvFile()} />
+                        {Array.isArray(env) && env.map((item) => {
+                            return <RenderEnv onClick={() => addEnvFile()} key={item.name} />
+                        })}
                         </div>
+
+
                     </div>
                     
                     </div>
