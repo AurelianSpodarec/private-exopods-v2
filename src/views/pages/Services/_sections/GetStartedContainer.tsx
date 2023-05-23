@@ -9,7 +9,7 @@ function GetStartedContainer() {
         <Card className="h-[120px] relative mr-56 -mt-16">
             <div className="flex jusify-between items-center w-full">
             <div>
-                <h1 className="text-4xl font-semibold">Hello Anthony!</h1>
+                <h1 className="text-4xl font-semibold font-['Poppins']">Hello Anthony!</h1>
                 <p className="text-base">It's good to see you.</p>
             </div>
             <div>
@@ -54,7 +54,7 @@ function GetStartedContainer() {
     
     <section className="mt-20">
         <div className="mb-12 max-w-[700px]">
-            <div className="mb-8 font-semibold">
+            <div className="mb-8 font-semibold font-['Poppins']">
                 <h1 className="text-3xl">Serverless</h1>
                 <span className="text-4xl">Deploy your <span className="text-[#08A593]">First Container</span></span>
             </div>

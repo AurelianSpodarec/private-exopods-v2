@@ -26,7 +26,7 @@ function AuthCarousel() {
                 <img src={shapes} />
             </header>
 
-            <section className="mt-auto">
+            <section className="mt-auto font-['Poppins']">
                 <div className="mb-8">
                 <Carousel   
                     autoPlay
@@ -77,7 +77,7 @@ function AuthCarousel() {
                         </clipPath>
                         </defs>
                     </svg>
-                    <span className="text-sm">aesthisia.com</span>
+                    <span className="text-sm font-['Poppins']">aesthisia.com</span>
                 </Link>
 
                 <div className="flex space-x-2">

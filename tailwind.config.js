@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
@@ -15,7 +16,14 @@ module.exports = {
       './src/**/*.{html,js,ts,jsx,tsx}'
   ],
   theme: {
-      extends: {}
+      extends: {
+        fontFamily: {
+          'poppins': ['Poppins', ...defaultTheme.fontFamily.sans],
+          'inter': ['Inter', ...defaultTheme.fontFamily.sans],
+          'isconsolata': ['Inconsolata', ...defaultTheme.fontFamily.sans],
+          'heading':  ['Poppins', ...defaultTheme.fontFamily.sans],
+        }
+      }
   },
   plugins: [],
 }

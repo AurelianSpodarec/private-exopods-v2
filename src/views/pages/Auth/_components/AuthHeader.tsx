@@ -9,7 +9,7 @@ function AuthHeader({ title, description }:any) {
             alt="Your Company"
         />
         <div className="text-center">
-            <h2 className="font-bold text-4xl text-[#020100] mb-2" dangerouslySetInnerHTML={{ __html: title }} />       
+            <h2 className="font-bold text-4xl  font-['Poppins'] text-[#020100] mb-2" dangerouslySetInnerHTML={{ __html: title }} />       
             {description && <p className="text-[#667085] text-sm">{description}</p>}
         </div>
     </div>

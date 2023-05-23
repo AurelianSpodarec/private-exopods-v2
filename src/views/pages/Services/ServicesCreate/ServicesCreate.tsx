@@ -11,7 +11,7 @@ function Box() {
             <div className="bg-[#D7D7D7] rounded-full p-3 h-14 w-14">
                 <img src="https://i.postimg.cc/cJfGhj36/wordpress-svgrepo-com-1.png" alt="" />
             </div>
-            <h3 className="text-xl text-[#0C0B0B] font-normal px-8">Jenkins</h3>
+            <h3 className="text-xl text-[#0C0B0B] font-['Poppins'] font-normal px-8">Jenkins</h3>
         </div>
         </div>
     )
@@ -88,12 +88,23 @@ function ServicesCreate() {
                         <div></div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-10">
-                        <div>
-                            <Input placeholder="Key"/>
-                        </div>
-                        <div>
-                            <Input placeholder="Value"/>
+                    <div>
+                        <div className="flex items-center">
+                            <div className="grid grid-cols-2 gap-10">
+                            <div>
+                                <Input placeholder="Key"/>
+                            </div>
+                            <div>
+                                <Input placeholder="Value"/>
+                            </div>
+                            </div>
+                            
+                            <button type="button" className="ml-4" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                <path d="M7.5 13.625V1.375" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.375 7.5H13.625" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </button>
                         </div>
                     </div>
                     

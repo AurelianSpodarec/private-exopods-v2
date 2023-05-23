@@ -1,6 +1,6 @@
 function Label({ id, label, children, htmlFor, optional, className }:LabelProps) {
     return (
-        <label id={id} htmlFor={htmlFor} className={`${className} block text-md mb-3 leading-2 font-medium text-skin-primary`}>
+        <label id={id} htmlFor={htmlFor} className={`${className} block text-md font-['Poppins'] mb-3 leading-2 font-medium text-skin-primary`}>
             {label ? <span>{label}</span> : children}
             {optional && <span className="ml-1 font-normal text-[#C4C4C4]">(optional)</span>}
         </label>
