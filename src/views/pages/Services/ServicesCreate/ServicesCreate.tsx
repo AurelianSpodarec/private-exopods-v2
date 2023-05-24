@@ -142,13 +142,6 @@ function ServicesCreate() {
                         <div></div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-10">
-                        <div>
-                            <Input label="Environment" placeholder="Ex. image:latest"/>
-                        </div>
-                        <div></div>
-                    </div>
-
                     <div>
                   
                         <div className="space-y-10">
