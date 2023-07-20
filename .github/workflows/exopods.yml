@@ -1,0 +1,39 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      
+      - name: Install dependencies
+        run: npm install
+          
+      - name: SSH into EC2 instance
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.EC2_INSTANCE_KEY }} 
+          known_hosts: 'just-a-placeholder'
+          username: exo_node
+          port: 22
+          script: |
+            cd /exo-serverless-node/
+            pm2 delete 0
+            pm2 start index.js
+          
+        
+      
+
+   
