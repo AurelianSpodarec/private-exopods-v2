@@ -29,7 +29,7 @@ jobs:
           username: exo_node
           port: 22
           script: |
-            cd /exo-serverless-node/
+            cd /exopods-v2-ui/
             pm2 delete 0
             pm2 start index.js
           
