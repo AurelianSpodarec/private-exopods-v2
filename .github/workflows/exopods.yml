@@ -1,38 +1,42 @@
-name: Deploy to EC2
-
+name: AWS ECR PUSH
 on:
   push:
     branches:
-      - master
-      
+      - main
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
+    - name: Checkout
+      uses: actions/checkout@v2
       
-      - name: Install dependencies
-        run: npm install
-          
-      - name: SSH into EC2 instance
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.EC2_INSTANCE_KEY }} 
-          known_hosts: 'just-a-placeholder'
-          username: exo_node
-          port: 22
-          script: |
-            cd /exopods-v2-ui/
-            npm run dev 
-          
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        node-version: 16.3.2
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-1
         
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+      
+    - name: Automatic Tagging of Releases
+      id: increment-git-tag
+      run: |
+        bash ./build/git_update.sh -v major
+      
+    - name: Build, tag and push the image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: exo
+        IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       
 
    
