@@ -2,7 +2,7 @@ name: AWS ECR PUSH
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   deploy:
     name: Deploy
