@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body suppressHydrationWarning={true} className={`${roboto.variable} ${montserrat.variable} ${bebasNeue.variable} ${archivoBlack.variable} ${cabinSketch.variable}`}>
+    <html lang="en" suppressHydrationWarning={true} className="h-full w-full">
+      <body suppressHydrationWarning={true} className={`h-full w-full ${roboto.variable} ${montserrat.variable} ${bebasNeue.variable} ${archivoBlack.variable} ${cabinSketch.variable}`}>
         <ContextProvider>
           {children}
         </ContextProvider>

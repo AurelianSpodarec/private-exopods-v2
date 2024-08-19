@@ -13,7 +13,7 @@ function Section({ id, className, style, children, color = "default", size = "md
   let useID = useId()
 
   const colors:any = {
-    default: "bg-white",
+    default: "bg-[#0c1015]",
     brand: "bg-[#8f4764]",
   }
 

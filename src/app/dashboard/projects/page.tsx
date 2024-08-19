@@ -1,21 +1,20 @@
 'use client'
 
 import { useQuery } from "@tanstack/react-query"
-
 import { getServiceAllPod } from "@/services/apis/endpoints/services"
-import CardProject from "./_components/CardProject"
+
 import Section from "@/components/_layout/Section"
 import Container from "@/components/_layout/Container"
 import { Button } from "@/components/atoms/button"
 
-function PageProjects() {
+import CardProject from "./_components/CardProject"
 
+function PageProjects() {
   const dataQuery = useQuery({
     queryKey: [`services`],
     queryFn: async () => await getServiceAllPod()
   })
 
-  console.log(dataQuery.data)
   if (!dataQuery.data) return <></>
   return (
     <>
@@ -42,7 +41,7 @@ function PageProjects() {
         <Container>
           <div className="grid grid-cols-4 gap-6">
             {dataQuery.data.data.map((project) => {
-              return <CardProject key={project.uuid} item={project} />
+              return <CardProject key={project.container._id} item={project} />
             })}
           </div>
         </Container>

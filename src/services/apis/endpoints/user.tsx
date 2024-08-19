@@ -1,15 +1,13 @@
 // ============================================================
 // API User
 // ============================================================
+import { IUser } from "@/interfaces/user";
+import { IApiResponse } from "./interface";
 import FetchExopods from "../fetch/FetchExopods"
 
 // User
 // ============================================================
 
-// export async function getUserprofile (bearerToekn: string) {
-//   return await FetchClocklance('users/profile', 'GET', undefined, undefined, bearerToekn)
-// }
-
-export async function getUserProfile() {
+export async function getUserProfile(): Promise<IApiResponse<IUser>> {
   return await FetchExopods('user/profile', "GET")
 }

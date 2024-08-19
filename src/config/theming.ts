@@ -120,13 +120,13 @@ export const theming = plugin(
 
         // Header
         // -------------------------------------------------------------
-        "--header-background": "#333",
+        "--header-background": "#0c1015",
         "--header-foreground": "black",
-        "--header-border-bottom": "green",
+        "--header-border-bottom": "red",
 
         // Sidebar
         // -------------------------------------------------------------
-        "--sidebar-background": "#333",
+        "--sidebar-background": "#0c1015",
         "--sidebar-foreground": "",
 
         "--sidebar-link-foreground": "#fff",

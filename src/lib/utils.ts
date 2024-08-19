@@ -15,3 +15,11 @@ export function parseCookies (cookiesString:any) {
 
   return cookies
 }
+
+export function formatBalance(balance:number) {
+  if (balance >= 1) {
+      return balance.toFixed(2);
+  } else {
+      return balance.toFixed(4);
+  }
+}

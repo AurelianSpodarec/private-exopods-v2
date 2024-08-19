@@ -22,70 +22,39 @@ interface IUserAvatar {
 
 function UserAvatar({ menu, email, name, avatar }: IUserAvatar) {
   return (
-    <div>
-      <DropdownMenuDefault>
-        <DropdownMenuDefaultTrigger>
-          <div className="flex items-center space-x-2">
-            <Image src={avatar} alt={email} width={30} height={30} className="rounded" />
-          </div>
-        </DropdownMenuDefaultTrigger>
+    <DropdownMenuDefault>
+      <DropdownMenuDefaultTrigger>
+        <div className="flex items-center space-x-2">
+          <Image src={avatar} alt={email} width={32} height={32} className="rounded-full" />
+        </div>
+      </DropdownMenuDefaultTrigger>
 
-        <DropdownMenuDefaultContent className="text-left">
-          <DropdownMenuDefaultGroup>
-            <DropdownMenuDefaultItem>
-              <div className="flex flex-col align-center">
-                <span>{name}</span>
-                <span>{email}</span>
-              </div>
-            </DropdownMenuDefaultItem>
-          </DropdownMenuDefaultGroup>
+      <DropdownMenuDefaultContent className="text-left">
+        <DropdownMenuDefaultGroup>
+          <DropdownMenuDefaultItem>
+            <div className="flex flex-col align-center">
+              <span>{name}</span>
+              <span>{email}</span>
+            </div>
+          </DropdownMenuDefaultItem>
+        </DropdownMenuDefaultGroup>
 
-          <DropdownMenuDefaultGroup>
-            <DropdownMenuDefaultItem>
-              Account
-            </DropdownMenuDefaultItem>
-            <DropdownMenuDefaultItem>
-              Create Team
-            </DropdownMenuDefaultItem>
-            <DropdownMenuDefaultSeparator />
-            <DropdownMenuDefaultItem>
-              Log Out
-            </DropdownMenuDefaultItem>
-          </DropdownMenuDefaultGroup>
+        <DropdownMenuDefaultGroup>
+          <DropdownMenuDefaultItem>
+            Account
+          </DropdownMenuDefaultItem>
+          <DropdownMenuDefaultItem>
+            Create Team
+          </DropdownMenuDefaultItem>
+          <DropdownMenuDefaultSeparator />
+          <DropdownMenuDefaultItem>
+            Log Out
+          </DropdownMenuDefaultItem>
+        </DropdownMenuDefaultGroup>
 
-        </DropdownMenuDefaultContent>
-      </DropdownMenuDefault>
-    </div>
+      </DropdownMenuDefaultContent>
+    </DropdownMenuDefault>
   );
 }
 
 export default UserAvatar;
-
-{/* <DropdownMenuDefaultItem>
-              Account
-            </DropdownMenuDefaultItem>
-            <DropdownMenuDefaultSeparator />
-            <DropdownMenuDefaultItem>
-              Log Out
-            </DropdownMenuDefaultItem> */}
-
-{/* {menu.map((menuItem, index) => (
-            <React.Fragment key={index}>
-            {"group" in menuItem ? (
-              <DropdownMenuDefaultItem>
-              <DropdownMenuDefaultLabel>{menuItem.name}</DropdownMenuDefaultLabel>
-              <DropdownMenuDefaultSeparator />
-              {menuItem.group!.map((groupItem, idx) => (
-                <DropdownMenuDefaultItem key={idx} onClick={groupItem.onAction}>
-                {groupItem.name}
-                </DropdownMenuDefaultItem>
-                ))}
-                <DropdownMenuDefaultSeparator />
-                </DropdownMenuDefaultItem>
-                ) : (
-                  <DropdownMenuDefaultItem onClick={menuItem.onAction}>
-                  <span>{menuItem.name}</span>
-                  </DropdownMenuDefaultItem>
-                  )}
-                  </React.Fragment>
-                  ))} */}
