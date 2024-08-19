@@ -1,6 +1,7 @@
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
@@ -23,9 +24,9 @@ export function DropdownMenuDefaultTrigger({ children }: { children: React.React
   )
 }
 
-export function DropdownMenuDefaultContent({ children }: { children: React.ReactNode }) {
+export function DropdownMenuDefaultContent({ children, className }: { children: React.ReactNode, className: string }) {
   return (
-    <DropdownMenuContent className="z-[9999px] bg-white rounded-dashboard-sidebar-dropdown-menu flex flex-col">
+    <DropdownMenuContent className={`z-[9999px] bg-white rounded-dashboard-sidebar-dropdown-menu flex flex-col ${className}`}>
       {children}
     </DropdownMenuContent>
   )
@@ -34,6 +35,12 @@ export function DropdownMenuDefaultContent({ children }: { children: React.React
 export function DropdownMenuDefaultSeparator() {
   return (
     <DropdownMenuSeparator />
+  )
+}
+
+export function DropdownMenuDefaultGroup({ children }: { children: React.ReactNode }) {
+  return (
+    <DropdownMenuGroup>{children}</DropdownMenuGroup>
   )
 }
 

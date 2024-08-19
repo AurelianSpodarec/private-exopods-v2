@@ -1,9 +1,7 @@
+import PageProjects from "./projects/page";
+
 function DashboardPage() {
-  return (
-    <div>
-      DashboardPage
-    </div>
-  );
+  return <PageProjects />
 }
 
 export default DashboardPage;
